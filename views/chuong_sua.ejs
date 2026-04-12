@@ -16,7 +16,7 @@
 		
 		<!-- Nội dung chính -->
 		<div class="card mt-3">
-			<div class="card-header">Thêm chương cho: <%= truyen.TenTruyen %></div>
+			<div class="card-header">Sửa chương cho: <%= truyen.TenTruyen %></div>
 			<div class="card-body">
 				<form action="/chuong/sua/<%= chuong._id %>" method="post" class="needs-validation" >
                     <input type="hidden" name="Truyen" value="<%= truyen._id %>">
@@ -48,6 +48,12 @@
 	</div>
 	
 	<%- include('javascript') %>
+	<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+	<script>
+		CKEDITOR.replace('NoiDung', {
+			customConfig: 'https://webdoctruyen-67po.onrender.com/js/config.js'
+		});
+	</script>
 	
 </body>
 
