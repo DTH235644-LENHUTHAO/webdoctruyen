@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+	<title><%= title %> - Web đọc truyện</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- Menu ngang -->
+		<%- include('navbar') %>
+		
+		<!-- Nội dung chính -->
+		<div class="card mt-3">
+			<div class="card-header"><%= title %></div>
+			<div class="card-body">
+				<div class="container mt-4">
+
+					<h3 class="mb-4">📊 Thống kê</h3>
+
+					<!-- STATS -->
+					<div class="row">
+
+						<div class="col-md-3">
+							<div class="card text-white bg-primary mb-3">
+								<div class="card-body">
+									<h5>Tổng truyện</h5>
+									<h3><%= tongTruyen %></h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="card text-white bg-success mb-3">
+								<div class="card-body">
+									<h5>Tài khoản</h5>
+									<h3><%= tongTaiKhoan %></h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="card text-white bg-warning mb-3">
+								<div class="card-body">
+									<h5>Chương</h5>
+									<h3><%= tongChuong %></h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="card text-white bg-danger mb-3">
+								<div class="card-body">
+									<h5>Bình luận</h5>
+									<h3><%= tongBinhLuan %></h3>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- QUICK MENU -->
+					<div class="card mb-4">
+						<div class="card-body">
+							<h5>⚡ Quản lý nhanh</h5>
+							<a href="/truyen" class="btn btn-primary">Truyện</a>
+							<a href="/taikhoan" class="btn btn-success">Tài khoản</a>
+							<a href="/theloai" class="btn btn-warning">Thể loại</a>
+						</div>
+					</div>
+
+					<!-- RECENT -->
+					<div class="row">
+
+						<div class="col-md-6">
+							<h5>📚 Truyện mới</h5>
+							<ul class="list-group">
+								<% truyenMoi.forEach(t => { %>
+									<li class="list-group-item">
+										<%= t.TenTruyen %>
+									</li>
+								<% }) %>
+							</ul>
+						</div>
+
+						<div class="col-md-6">
+							<h5>👤 User mới</h5>
+							<ul class="list-group">
+								<% userMoi.forEach(u => { %>
+									<li class="list-group-item">
+										<%= u.HoVaTen %>
+									</li>
+								<% }) %>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<%- include('footer') %>
+	</div>
+	
+	<%- include('javascript') %>
+</body>
+
+</html>
+
+

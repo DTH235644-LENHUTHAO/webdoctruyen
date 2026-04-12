@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="Trang web đọc truyện hữu ích và dễ thương nhất." />
+	<meta name="author" content="Lê Nhựt Hào và Nguyễn Chí Thanh" />
+	<title><%= (typeof truyen !== "undefined") ? truyen.TenTruyen : 'N/A' %> - Web đọc truyện</title>
+	<link href="http://127.0.0.1:3000/css/app.css" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark shadow"
+			style="background: linear-gradient(90deg, #0d6efd, #0dcaf0);">
+			<div class="container">
+
+				<button class="navbar-toggler order-2 order-md-1" type="button"
+					data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- LEFT -->
+				<div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
+					<ul class="navbar-nav me-auto fw-semibold">
+						<li class="nav-item dropdown active">
+							<a class="nav-link dropdown-toggle text-white"
+							href="#" id="chuyenmuc"
+							data-bs-toggle="dropdown"
+							style="transition:0.2s;"
+							onmouseover="this.style.color='#ffd700'"
+							onmouseout="this.style.color='white'">
+								<i class="bi bi-list"></i> Chuyên mục
+							</a>
+
+							<div class="dropdown-menu shadow border-0">
+								<% if(typeof chuyenmuc !== "undefined") { chuyenmuc.forEach(tl => { %>
+									<a class="dropdown-item"
+									href="/truyen/theloai/<%= tl._id %>"
+									style="transition:0.2s;"
+									onmouseover="this.style.background='#f1f1f1'">
+										<%= tl.TenTheLoai %>
+									</a>
+								<% }); } %>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- LOGO -->
+				<a class="navbar-brand mx-auto order-1 order-md-3 fw-bold text-white"
+					href="/"
+					style="font-size: 22px; letter-spacing:1px; text-transform:none;">
+						<i class="bi bi-book-half"></i> iTruyens
+				</a>
+
+				<!-- RIGHT -->
+				<div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
+					<ul class="navbar-nav ms-auto fw-semibold">
+
+						<% if(typeof session === "undefined" || !session.MaNguoiDung) { %>
+							<li class="nav-item">
+								<a class="nav-link text-white"
+								href="/dangky"
+								onmouseover="this.style.color='#ffd700'"
+								onmouseout="this.style.color='white'">
+									<i class="bi bi-person-plus"></i> Đăng ký
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link text-white"
+								href="/dangnhap"
+								onmouseover="this.style.color='#ffd700'"
+								onmouseout="this.style.color='white'">
+									<i class="bi bi-box-arrow-in-right"></i> Đăng nhập
+								</a>
+							</li>
+
+						<% } else { %>
+							<ul class="navbar-nav ms-auto fw-semibold align-items-center">
+							<li class="nav-item">
+								<a class="nav-link text-white d-flex align-items-center"
+								href="/taikhoan/profile"
+								style="transition:0.2s;"
+								onmouseover="this.style.color='#ffd700'"
+								onmouseout="this.style.color='white'">
+
+									<img src="<%= session.HinhAnh || '/images/noimage.png' %>"
+										style="width:32px;height:32px;border-radius:50%;object-fit:cover;margin-right:8px;border:2px solid white;">
+
+									<%= session.HoVaTen %>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white "
+								href="/admin"
+								onmouseover="this.style.color='#ffd700'"
+								onmouseout="this.style.color='white'">
+									<i class="bi bi-gear"></i> Quản lý
+								</a>
+							</li>
+
+							<li class="nav-item">
+								
+								<a class="nav-link text-white "
+								href="/dangxuat"
+								onmouseover="this.style.color='#ffd700'"
+								onmouseout="this.style.color='white'">
+									<i class="bi bi-box-arrow-right"></i> Đăng xuất
+								</a>
+							</li>
+							</ul>
+						<% } %>
+					</ul>
+
+					<!-- SEARCH -->
+					<form class="d-flex ms-3" role="search" action="/timkiem" method="post">
+						<input name="tukhoa"
+							class="form-control me-2"
+							type="text"
+							placeholder="Tìm kiếm..."
+							style="border-radius: 20px;">
+						<button class="btn btn-primary rounded-pill px-3" type="submit">
+							<i class="bi bi-search" style="color:white; font-size:16px;"></i>
+						</button>
+					</form>
+
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main class="main pt-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+				<% if(typeof truyen !== "undefined") { %>
+                    <article class="card mb-4">
+                        <header class="card-header text-center">
+                            <div class="card-meta">
+                                <a href="#"> <span><%= formatTime(truyen.NgayDang) %></span></a> thuộc <a href="/truyen/theloai/<%= truyen.TheLoai._id %>"><%= truyen.TheLoai.TenTheLoai %></a>, có <%= truyen.LuotXem%> lượt xem.
+                            </div>
+                            <a href="post-image.html">
+                                <h3 class="card-title"><%= truyen.TenTruyen %></h3>
+                            </a>
+                        </header>
+                        <div class="card-body">
+							<div style="text-align:center;">
+								<img class="card-img mb-4 rounded shadow"
+									src="<%- (truyen.HinhAnh && truyen.HinhAnh.trim()) ? truyen.HinhAnh : '/images/noimage.png' %>"
+									style="max-width:40%; height:auto;"
+									onerror="this.onerror=null;this.src='/images/noimage.png';"
+									alt="" />
+							</div>
+                            <p style="text-align:center;">Tóm tắt: <strong><%= truyen.TomTat %></strong></p>
+							
+							<hr />
+							<h4>Danh sách chương</h4>
+
+								<% if (typeof dsChuong !== "undefined" && dsChuong.length > 0) { %>
+
+									<ul class="list-group mb-3" style="max-height:300px; overflow-y:auto;">
+										
+										<% dsChuong.forEach((ch, index) => { %>
+											<li class="list-group-item <%= index >= 10 ? 'd-none extra-chuong' : '' %>">
+												<a href="/chuong/chitiet/<%= ch._id %>">
+													<%= ch.TieuDe %>
+												</a>
+											</li>
+										<% }); %>
+
+									</ul>
+
+									<% if (dsChuong.length > 10) { %>
+										<button id="btnXemThem" class="btn btn-outline-primary w-100">
+											Xem thêm
+										</button>
+									<% } %>
+
+								<% } else { %>
+									<p>Chưa có chương nào.</p>
+								<% } %>
+
+							<hr />
+                            <hr />
+
+							<h4 class="mt-4">💬 Bình luận mới nhất</h4>
+
+							<% if(binhluan && binhluan.length > 0) { %>
+
+								<% binhluan.forEach(bl => { %>
+									<div class="d-flex mb-3 p-2 bg-light rounded">
+
+										<!-- avatar -->
+										<img 
+											src="<%= bl.TaiKhoan && bl.TaiKhoan.HinhAnh ? bl.TaiKhoan.HinhAnh : '/images/noimage.png' %>" 
+											style="width:40px;height:40px;border-radius:50%;object-fit:cover;"
+										/>
+
+										<!-- nội dung -->
+										<div class="ms-2 w-100">
+
+											<div class="d-flex justify-content-between">
+												<div>
+													<strong><%= bl.TaiKhoan.HoVaTen %></strong>
+													<br>
+													<a href="/chuong/chitiet/<%= bl.Chuong._id %>" class="text-primary">
+														<%= bl.Chuong.TieuDe %>
+													</a>
+												</div>
+
+												<small class="text-muted">
+													<%= new Date(bl.createdAt).toLocaleString() %>
+												</small>
+											</div>
+
+											<p class="mb-1"><%= bl.NoiDung %></p>
+
+										</div>
+
+									</div>
+								<% }) %>
+
+							<% } else { %>
+
+								<p class="text-muted">Chưa có bình luận 😢</p>
+
+							<% } %>
+                        </div>
+                    </article>
+				<% } %>
+                </div>
+				<div class="col-md-3 ms-auto">
+					<aside class="sidebar">
+						<div class="card mb-4">
+							<div class="card-body">
+								<h4 class="card-title">Giới thiệu</h4>
+								<p class="card-text">Đọc truyện trên trang web này sẽ giúp bạn có cái nhìn khách quan về cuộc sống. Đừng quên chia sẻ trang này cho toàn bộ vũ trụ biết nhé. Mến yêu.</p>
+							</div>
+						</div>
+					</aside>
+					<aside class="sidebar sidebar-sticky">
+						<div class="card mb-4">
+							<div class="card-body">
+								<h4 class="card-title">Thẻ</h4>
+								<% if(typeof chuyenmuc !== "undefined") { chuyenmuc.forEach(tl => { %>
+									<a class="btn btn-light btn-sm mb-1" href="/truyen/theloai/<%= tl._id %>"><%= tl.TenTheLoai %></a>
+								<% }); } %>
+							</div>
+						</div>
+						<div class="card mb-4">
+							<div class="card-body">
+								<h4 class="card-title">Xem nhiều nhất</h4>
+								<% if(typeof xemnhieunhat !== "undefined") { xemnhieunhat.forEach(tr => { %>
+									<a href="/truyen/chitiet/<%= tr._id %>" class="d-inline-block mt-3">
+										<h4 class="h6"><%= tr.TenTruyen %></h4>
+										<img class="card-img" src="<%- (tr.HinhAnh && tr.HinhAnh.trim()) ? tr.HinhAnh : '/images/noimage.png' %>" onerror="this.onerror=null;this.src='/images/noimage.png';" alt="" />
+									</a>
+									<span><%= formatTime(tr.NgayDang) %></span> thuộc <%= tr.TheLoai.TenTheLoai %>
+								<% }); } %>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="site-newsletter py-5"
+		style="background: url('/images/instagram/anhbia.jpg') center/cover no-repeat;">
+
+		<!-- lớp phủ tối -->
+		<div style="background: rgba(0,0,0,0.55); padding:50px 0;">
+
+			<div class="container">
+				<div class="text-center text-white">
+
+					<h3 class="h3 fw-bold mb-3">
+						📩 Đăng ký nhận truyện mới
+					</h3>
+
+					<p class="mb-4" style="opacity:0.9;">
+						Nhận thông báo ngay khi có chương mới và truyện hot 🔥
+					</p>
+
+					<div class="row">
+						<div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+
+							<div class="input-group shadow"
+								style="border-radius:50px; overflow:hidden;">
+
+								<input type="text"
+									class="form-control border-0 px-4"
+									placeholder="Nhập email của bạn..."
+									style="height:50px;">
+
+								<button class="btn fw-bold text-white px-4"
+										style="background:#ff6b6b;"
+										onmouseover="this.style.background='#ff4b4b'"
+										onmouseout="this.style.background='#ff6b6b'">
+									Đăng ký
+								</button>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="site-instagram">
+		<div class="action">
+			<a class="btn btn-light" href="#">
+				Theo dõi chúng tôi @ Instagram
+			</a>
+		</div>
+		<div class="row g-0">
+			<div class="col-sm-6">
+				<div class="row g-0">
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/1.jpg" alt="" /></a></div>
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/2.jpg" alt="" /></a></div>
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/3.jpg" alt="" /></a></div>
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/4.jpg" alt="" /></a></div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="row g-0">
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/5.jpg" alt="" /></a></div>
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/6.jpg" alt="" /></a></div>
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/7.jpg" alt="" /></a></div>
+					<div class="col-3"><a class="photo" href="#"><img class="img-fluid" src="http://127.0.0.1:3000/images/instagram/8.jpg" alt="" /></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="site-footer bg-dark">
+		<div class="container">
+			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="#">Chính sách riêng tư</a></li>
+				<li class="nav-item"><a class="nav-link" href="/dangky">Đăng ký</a></li>
+				<li class="nav-item"><a class="nav-link" href="/dangnhap">Đăng nhập</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+			</ul>
+			<div class="copy">
+				Bản quyền &copy; 2025 bởi Lê Nhựt Hào - Nguyễn Chí Thanh.
+			</div>
+		</div>
+	</footer>
+
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const btn = document.getElementById("btnXemThem");
+
+			if (btn) {
+				btn.addEventListener("click", function () {
+					document.querySelectorAll(".extra-chuong")
+						.forEach(el => el.classList.remove("d-none"));
+
+					btn.style.display = "none"; 
+				});
+			}
+		});
+	</script>
+
+	<script src="http://127.0.0.1:3000/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm"
+     style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+
+    <div class="container-fluid">
+        
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="/" style="font-size: 22px;">
+            <i class="bi bi-stars me-2"></i> iTruyens
+        </a>
+
+        <!-- Mobile button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="/truyenmoi"
+                       style="transition:0.3s;"
+                       onmouseover="this.style.color='#ffe082'"
+                       onmouseout="this.style.color='white'">
+                        <i class="bi bi-compass"></i> Truyện vừa đăng
+                    </a>
+                </li>
+
+                <% if(typeof session === "undefined" || !session.MaNguoiDung) { %>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dangky"
+                           onmouseover="this.style.color='#ffe082'"
+                           onmouseout="this.style.color='white'">
+                            <i class="bi bi-person-plus-fill"></i> Đăng ký
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dangnhap"
+                           onmouseover="this.style.color='#ffe082'"
+                           onmouseout="this.style.color='white'">
+                            <i class="bi bi-box-arrow-in-right"></i> Đăng nhập
+                        </a>
+                    </li>
+
+                <% } else { %>
+
+                    <% if(session.QuyenHan == "admin") { %>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-warning" href="/chuaduyet"
+                            onmouseover="this.style.color='#ff6b6b'"
+                            onmouseout="this.style.color='#ffe082'">
+                                <i class="bi bi-exclamation-triangle-fill"></i> Truyện cần duyệt
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <i class="bi bi-gear"></i> Quản lý
+                            </a>
+                            <ul class="dropdown-menu shadow rounded-3">
+                                <li><a class="dropdown-item" href="/truyen"><i class="bi bi-file-earmark-richtext"></i> Truyện</a></li>
+                                <li><a class="dropdown-item" href="/theloai"><i class="bi bi-card-checklist"></i> Thể loại</a></li>
+                                <li><a class="dropdown-item" href="/taikhoan"><i class="bi bi-people"></i> Tài khoản</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/admin"><i class="bi bi-file-earmark-richtext"></i> Thống kê</a></li>
+                            </ul>
+                        </li>
+                    <% } %>
+
+                    <!-- User -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> <%= session.HoVaTen %>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow rounded-3">
+                            <li><a class="dropdown-item" href="/truyen/them"><i class="bi bi-file-earmark-plus"></i> Đăng truyện</a></li>
+                            <li><a class="dropdown-item" href="/truyen/cuatoi"><i class="bi bi-journal-bookmark"></i> Truyện của tôi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/taikhoan/profile"><i class="bi bi-person-badge"></i> Hồ sơ cá nhân</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dangxuat"
+                           onmouseover="this.style.color='#ff6b6b'"
+                           onmouseout="this.style.color='white'">
+                            <i class="bi bi-box-arrow-right"></i> Đăng xuất
+                        </a>
+                    </li>
+
+                <% } %>
+            </ul>
+
+            <!-- Search -->
+            <form class="d-flex ms-3" role="search" action="/timkiem" method="post">
+				<input name="tukhoa"
+					class="form-control me-2"
+					type="text"
+					placeholder="Tìm kiếm..."
+					value="<%= typeof tukhoa !== 'undefined' ? tukhoa : '' %>"
+					autocomplete="off"
+					required
+					style="border-radius: 20px;">
+
+				    <button class="btn btn-primary rounded-pill px-3" type="submit">
+						<i class="bi bi-search" style="color:white; font-size:16px;"></i>
+					</button>
+			</form>
+
+        </div>
+    </div>
+</nav>

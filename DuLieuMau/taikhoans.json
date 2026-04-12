@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "HoVaTen": "Quản Trị Viên",
+  "Email": "admin@gmail.com",
+  "HinhAnh": "",
+  "TenDangNhap": "admin",
+  "MatKhau": "$2b$10$9BlecBC0.XgvR5H7Hn.Ro.2a3x1dtfZIkRt78j7Aacj9j8eG3QxOK",
+  "QuyenHan": "admin",
+  "KichHoat": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d95078101488071717eb06"
+  },
+  "HoVaTen": "Thành Viên",
+  "Email": "user@gmail.com",
+  "HinhAnh": "",
+  "TenDangNhap": "user",
+  "MatKhau": "$2b$10$dlifRfa4hJ0F4D2AxyZeFORfLcjPt4JfQ3awt3pGgtZPVYLIJJd1a",
+  "QuyenHan": "user",
+  "KichHoat": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d4cdf9b87257cb22ad1288"
+  },
+  "HoVaTen": "Lê Nhựt Hào",
+  "Email": "lenhuthao@gmail.com",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1775978073/truyen/bmjknmbmmpoh7jtznfsr.jpg",
+  "TenDangNhap": "lnh",
+  "MatKhau": "$2b$10$5sfz.Kr.//.8rfzzT86Yh.BZ66tU65C0zJaGcA1Fa2eA4iOb9D33K",
+  "QuyenHan": "admin",
+  "KichHoat": 1,
+  "__v": 0
+}
+]
