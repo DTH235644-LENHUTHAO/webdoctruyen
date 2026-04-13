@@ -396,7 +396,7 @@
 	<script>
 	document.addEventListener('DOMContentLoaded', function() {
 
-		// ===== CHUYÊN MỤC =====
+		// chuyen muc dropdown
 		var dropdownElement = document.getElementById('chuyenmuc');
 		if (dropdownElement) {
 			dropdownElement.addEventListener('click', function (e) {
@@ -408,7 +408,7 @@
 			});
 		}
 
-		// ===== USER DROPDOWN =====
+		// user dropdown
 		const userBtn = document.getElementById('userMenu');
 		const userMenu = document.getElementById('userDropdown');
 
@@ -426,7 +426,7 @@
 			});
 		}
 
-		// ===== CLICK NGOÀI =====
+		// Đóng dropdown khi click ra ngoài
 		document.addEventListener('click', function (e) {
 
 			// đóng chuyên mục
@@ -444,5 +444,37 @@
 
 	});
 	</script>
+	<style>
+
+	/* đảm bảo navbar không chặn dropdown */
+	.navbar {
+		overflow: visible;
+	}
+
+	/* custom user dropdown */
+	#userDropdown {
+		position: absolute;
+		right: 0;
+		top: 100%;
+		min-width: 180px;
+		max-width: 90vw;
+		z-index: 9999;
+	}
+
+	/* mobile fix */
+	@media (max-width: 768px) {
+		#userDropdown {
+			position: static;
+			width: 100%;
+		}
+
+		.dropdown-menu {
+			position: static;
+			width: 100%;
+			max-width: 100%;
+			box-shadow: none;
+		}
+	}
+	</style>
 </body>
 </html>
