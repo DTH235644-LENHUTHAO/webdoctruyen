@@ -1,158 +1,279 @@
-[
-  {
-    "_id": { "$oid": "660000000000000000001001" },
-    "TenTruyen": "Phàm Nhân Tu Tiên",
-    "TheLoai": { "$oid": "660000000000000000000010" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Vong Ngữ",
-    "TomTat": "Hàn Lập và chiếc bình nhỏ lục bảo nghịch chuyển thiên mệnh.",
-    "HinhAnh": "",
-    "LuotXem": 120,
-    "KiemDuyet": 1,
-    "__v": 0
+[{
+  "_id": {
+    "$oid": "660000000000000000001001"
   },
-  {
-    "_id": { "$oid": "660000000000000000001002" },
-    "TenTruyen": "Tiên Nghịch",
-    "TheLoai": { "$oid": "660000000000000000000010" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Nhĩ Căn",
-    "TomTat": "Vương Lâm và Thiên Nghịch Châu trên con đường tu tiên đầy sát phạt.",
-    "HinhAnh": "",
-    "LuotXem": 200,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TenTruyen": "Phàm Nhân Tu Tiên",
+  "TheLoai": {
+    "$oid": "660000000000000000000010"
   },
-  {
-    "_id": { "$oid": "660000000000000000001003" },
-    "TenTruyen": "Tổng Tài Bá Đạo",
-    "TheLoai": { "$oid": "660000000000000000000011" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Ẩn Danh",
-    "TomTat": "Chuyện tình giữa tổng tài Lục Cận Ngôn và cô gái Diệp Oanh.",
-    "HinhAnh": "",
-    "LuotXem": 80,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
   },
-  {
-    "_id": { "$oid": "660000000000000000001004" },
-    "TenTruyen": "Yêu Em Từ Cái Nhìn Đầu Tiên",
-    "TheLoai": { "$oid": "660000000000000000000011" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Cố Mạn",
-    "TomTat": "Mối tình từ game online đến đời thực của Tiêu Nại và Vy Vy.",
-    "HinhAnh": "",
-    "LuotXem": 95,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TacGia": "Vong Ngữ",
+  "TomTat": "Hàn Lập và chiếc bình nhỏ lục bảo nghịch chuyển thiên mệnh.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062375/truyen/w57gaho6h13dtzr8hs9e.jpg",
+  "LuotXem": 130,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001002"
   },
-  {
-    "_id": { "$oid": "660000000000000000001005" },
-    "TenTruyen": "Đấu Phá Thương Khung",
-    "TheLoai": { "$oid": "660000000000000000000012" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Thiên Tằm Thổ Đậu",
-    "TomTat": "Tiêu Viêm và hành trình chinh phục dị hỏa, trở thành Đấu Đế.",
-    "HinhAnh": "",
-    "LuotXem": 300,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TenTruyen": "Tiên Nghịch",
+  "TheLoai": {
+    "$oid": "660000000000000000000010"
   },
-  {
-    "_id": { "$oid": "660000000000000000001006" },
-    "TenTruyen": "Đấu La Đại Lục",
-    "TheLoai": { "$oid": "660000000000000000000012" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Đường Gia Tam Thiếu",
-    "TomTat": "Đường Tam và hành trình tu luyện võ hồn tại Đấu La Đại Lục.",
-    "HinhAnh": "",
-    "LuotXem": 210,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
   },
-  {
-    "_id": { "$oid": "660000000000000000001007" },
-    "TenTruyen": "Đô Thị Tu Tiên",
-    "TheLoai": { "$oid": "660000000000000000000013" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Thập Lý Kiếm Thần",
-    "TomTat": "Bắc Huyền Tiên Tôn Trần Phàm trọng sinh quét ngang đô thị.",
-    "HinhAnh": "",
-    "LuotXem": 70,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TacGia": "Nhĩ Căn",
+  "TomTat": "Vương Lâm và Thiên Nghịch Châu trên con đường tu tiên đầy sát phạt.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062402/truyen/hcl6nlvjhgvscavyydez.jpg",
+  "LuotXem": 200,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001003"
   },
-  {
-    "_id": { "$oid": "660000000000000000001008" },
-    "TenTruyen": "Anh Hùng Xạ Điêu",
-    "TheLoai": { "$oid": "660000000000000000000014" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Kim Dung",
-    "TomTat": "Quách Tĩnh, Hoàng Dung và những ân oán giang hồ kinh điển.",
-    "HinhAnh": "",
-    "LuotXem": 500,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TenTruyen": "Tổng Tài Bá Đạo",
+  "TheLoai": {
+    "$oid": "660000000000000000000011"
   },
-  {
-    "_id": { "$oid": "660000000000000000001009" },
-    "TenTruyen": "Thần Điêu Hiệp Lữ",
-    "TheLoai": { "$oid": "660000000000000000000014" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Kim Dung",
-    "TomTat": "Mối tình khắc cốt ghi tâm của Dương Quá và Tiểu Long Nữ.",
-    "HinhAnh": "",
-    "LuotXem": 400,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
   },
-  {
-    "_id": { "$oid": "660000000000000000001010" },
-    "TenTruyen": "Sherlock Holmes",
-    "TheLoai": { "$oid": "660000000000000000000015" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Conan Doyle",
-    "TomTat": "Những vụ án hóc búa của thám tử Holmes và bác sĩ Watson.",
-    "HinhAnh": "",
-    "LuotXem": 150,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TacGia": "Ẩn Danh",
+  "TomTat": "Chuyện tình giữa tổng tài Lục Cận Ngôn và cô gái Diệp Oanh.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062433/truyen/jdioulqtrczp7mwcnqxn.jpg",
+  "LuotXem": 82,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001004"
   },
-  {
-    "_id": { "$oid": "660000000000000000001011" },
-    "TenTruyen": "Kiếm Đạo Độc Tôn",
-    "TheLoai": { "$oid": "660000000000000000000014" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Kiếm Du Thái Hư",
-    "TomTat": "Diệp Trần lĩnh ngộ kiếm ý, độc tôn trong thiên hạ.",
-    "HinhAnh": "",
-    "LuotXem": 180,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TenTruyen": "Yêu Em Từ Cái Nhìn Đầu Tiên",
+  "TheLoai": {
+    "$oid": "660000000000000000000011"
   },
-  {
-    "_id": { "$oid": "660000000000000000001012" },
-    "TenTruyen": "Harry Potter",
-    "TheLoai": { "$oid": "660000000000000000000012" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "J.K. Rowling",
-    "TomTat": "Cậu bé phù thủy và cuộc chiến chống lại Voldemort.",
-    "HinhAnh": "",
-    "LuotXem": 160,
-    "KiemDuyet": 1,
-    "__v": 0
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
   },
-  {
-    "_id": { "$oid": "660000000000000000001013" },
-    "TenTruyen": "Tây Du Ký",
-    "TheLoai": { "$oid": "660000000000000000000017" },
-    "TaiKhoan": { "$oid": "67d01e839e3915e4eaadad90" },
-    "TacGia": "Ngô Thừa Ân",
-    "TomTat": "Thầy trò Đường Tăng vượt 81 kiếp nạn thỉnh kinh.",
-    "HinhAnh": "",
-    "LuotXem": 220,
-    "KiemDuyet": 1,
-    "__v": 0
-  }
-]
+  "TacGia": "Cố Mạn",
+  "TomTat": "Mối tình từ game online đến đời thực của Tiêu Nại và Vy Vy.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062456/truyen/f5zwb9lqdfnbxrlv5fou.jpg",
+  "LuotXem": 95,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001005"
+  },
+  "TenTruyen": "Đấu Phá Thương Khung",
+  "TheLoai": {
+    "$oid": "660000000000000000000012"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "Thiên Tằm Thổ Đậu",
+  "TomTat": "Tiêu Viêm và hành trình chinh phục dị hỏa, trở thành Đấu Đế.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062470/truyen/rqdskmmazjkfg30pty48.jpg",
+  "LuotXem": 307,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001006"
+  },
+  "TenTruyen": "Đấu La Đại Lục",
+  "TheLoai": {
+    "$oid": "660000000000000000000012"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "Đường Gia Tam Thiếu",
+  "TomTat": "Đường Tam và hành trình tu luyện võ hồn tại Đấu La Đại Lục.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062525/truyen/l5o1o1pp6ovoqpbwkwml.png",
+  "LuotXem": 216,
+  "KiemDuyet": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001007"
+  },
+  "TenTruyen": "Đô Thị Tu Tiên",
+  "TheLoai": {
+    "$oid": "660000000000000000000013"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "Thập Lý Kiếm Thần",
+  "TomTat": "Bắc Huyền Tiên Tôn Trần Phàm trọng sinh quét ngang đô thị.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062547/truyen/zebl1kkamm3le2robws8.jpg",
+  "LuotXem": 71,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001008"
+  },
+  "TenTruyen": "Anh Hùng Xạ Điêu",
+  "TheLoai": {
+    "$oid": "660000000000000000000014"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "Kim Dung",
+  "TomTat": "Quách Tĩnh, Hoàng Dung và những ân oán giang hồ kinh điển.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062566/truyen/oyhuitrnrgemeugk22mr.jpg",
+  "LuotXem": 513,
+  "KiemDuyet": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001010"
+  },
+  "TenTruyen": "Sherlock Holmes",
+  "TheLoai": {
+    "$oid": "660000000000000000000015"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "Conan Doyle",
+  "TomTat": "Những vụ án hóc búa của thám tử Holmes và bác sĩ Watson.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062608/truyen/nixwwzm2igvpgxmh07cc.jpg",
+  "LuotXem": 157,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001011"
+  },
+  "TenTruyen": "Kiếm Đạo Độc Tôn",
+  "TheLoai": {
+    "$oid": "660000000000000000000014"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "Kiếm Du Thái Hư",
+  "TomTat": "Diệp Trần lĩnh ngộ kiếm ý, độc tôn trong thiên hạ.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062677/truyen/aedjkeybiomhb9r0hovo.jpg",
+  "LuotXem": 180,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001012"
+  },
+  "TenTruyen": "Harry Potter",
+  "TheLoai": {
+    "$oid": "660000000000000000000012"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "J.K. Rowling",
+  "TomTat": "Cậu bé phù thủy và cuộc chiến chống lại Voldemort.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062698/truyen/wtbbntix2q4obxfzfguf.jpg",
+  "LuotXem": 161,
+  "KiemDuyet": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660000000000000000001013"
+  },
+  "TenTruyen": "Tây Du Ký",
+  "TheLoai": {
+    "$oid": "660000000000000000000017"
+  },
+  "TaiKhoan": {
+    "$oid": "67d01e839e3915e4eaadad90"
+  },
+  "TacGia": "Ngô Thừa Ân",
+  "TomTat": "Thầy trò Đường Tăng vượt 81 kiếp nạn thỉnh kinh.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062712/truyen/ix4fjicksegwz4dw8sin.jpg",
+  "LuotXem": 221,
+  "KiemDuyet": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d61eac5fab5679a8d6dd28"
+  },
+  "TenTruyen": "Đạo Mộ Bút Ký",
+  "TheLoai": {
+    "$oid": "660000000000000000000016"
+  },
+  "TaiKhoan": {
+    "$oid": "69d4cdf9b87257cb22ad1288"
+  },
+  "TacGia": "Nam Phái Tam Thúc",
+  "TomTat": "Vào năm 1952, một nhóm trộm mộ đã tìm được những bản đồ về vị trí của một kho báu thời Chiến Quốc, nhưng trong cuộc chạm trán với một cương thi đã khiến nhóm này gần như chết sạch. Hiện tại, người cháu trai của kẻ sống sót duy nhất, Ngô Tà, phát hiện ra bí mật trong các ghi chú cũ của ông nội mình được gọi là Đạo mộ Bút ký, trong đó có đề cập kiến thức cả đời của một gia tộc trộm mộ danh tiếng ở Trường Sa, Hồ Nam.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062725/truyen/oex8krji2rmwjgjgzbaj.jpg",
+  "LuotXem": 16,
+  "KiemDuyet": 0,
+  "NgayDang": {
+    "$date": "2026-04-08T09:23:56.173Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69db9c615ced8a1a9c01a0ed"
+  },
+  "TenTruyen": "Trạng Quỳnh",
+  "TheLoai": {
+    "$oid": "660000000000000000000017"
+  },
+  "TaiKhoan": {
+    "$oid": "69db9bc15ced8a1a9c01a0dd"
+  },
+  "TacGia": "Kim Khánh",
+  "TomTat": "\"Trạng Quỳnh – Trạng Quỷnh\" là bộ truyện tranh thiếu nhi nổi tiếng của tác giả Kim Khánh, được Nhà xuất bản Đồng Nai phát hành lần đầu từ tháng 6/2003. Bộ truyện xoay quanh nhân vật Trạng Quỳnh thông minh, nghịch ngợm, chuyên dùng trí tuệ để bảo vệ người dân nghèo. ",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776062737/truyen/nhmfnp6zl0oxzvhsuar9.jpg",
+  "LuotXem": 2,
+  "KiemDuyet": 1,
+  "NgayDang": {
+    "$date": "2026-04-12T13:21:37.718Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dc91ee469694fc4f49a327"
+  },
+  "TenTruyen": "Thần Điêu Hiệp Lữ",
+  "TheLoai": {
+    "$oid": "660000000000000000000014"
+  },
+  "TaiKhoan": {
+    "$oid": "69d4cdf9b87257cb22ad1288"
+  },
+  "TacGia": "Kim Dung",
+  "TomTat": "Câu chuyện giang hồ cùng tình yêu đầy trắc trở của Dương Quá và Tiểu Long Nữ.",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1776063056/truyen/gkjqy3gmfzfn6pdow7yd.jpg",
+  "LuotXem": 0,
+  "KiemDuyet": 1,
+  "NgayDang": {
+    "$date": "2026-04-13T06:49:18.496Z"
+  },
+  "__v": 0
+}]

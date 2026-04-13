@@ -36,5 +36,30 @@
   "QuyenHan": "admin",
   "KichHoat": 1,
   "__v": 0
-}
-]
+},
+{
+  "_id": {
+    "$oid": "69db6594178a67020c2a0a29"
+  },
+  "HoVaTen": "Nguyễn Ngọc Anh Thư",
+  "Email": "nguyenngcanhthu@gmail.com",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1775986067/truyen/pnpybdkmoksy8gwbt6gn.jpg",
+  "TenDangNhap": "nnat",
+  "MatKhau": "$2b$10$Op2sVxXvKvKM8mwEU/sSkeyt4GfyZYFB0NPNDThZr9oc8whfkl6VO",
+  "QuyenHan": "user",
+  "KichHoat": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69db9bc15ced8a1a9c01a0dd"
+  },
+  "HoVaTen": "Nguyễn Chí Thanh",
+  "Email": "nguyenchithanh@gmail.com",
+  "HinhAnh": "https://res.cloudinary.com/de96rhre5/image/upload/v1775999935/truyen/kl6pgwtvupv7lwln8tix.jpg",
+  "TenDangNhap": "nct",
+  "MatKhau": "$2b$10$RNbHOFw.t6g/4Bhfr9Bb..npeQuWraGB1IJoRwbaJKOXVjAAp..ji",
+  "QuyenHan": "user",
+  "KichHoat": 1,
+  "__v": 0
+}]
